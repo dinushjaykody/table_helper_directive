@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app = "directivesModule">
+    <body ng-controller = "CustomersController">
+    <div>
+        <h2> Shared Scope </h2>
+        <hello-world></hello-world>
+    </div>
+
+    <div>
+        <h2> Isolate Scope With String with @</h2>
+        <isolate-scope-with-string name="{{customer.name}}"></isolate-scope-with-string>
+    </div>
+
+    <div>
+        <h2> Isolate Scope With Object with =</h2>
+        <isolate-scope-with-object datasource="customer"></isolate-scope-with-object>
+    </div>
+
+    <div>
+        <h2> Isolate Scope With Event with &</h2>
+        <isolate-scope-with-event datasource="customer" action="changeData()"></isolate-scope-with-event>
+    </div>
+
+    <!--To check the link demo example remove the ng-controller-->
+    <div>
+        <h2> Link Demo Examples </h2>
+        <div link-demo> Click Me</div>
+    </div>
+
+
+        <script src="scripts/angular.js"></script>
+        <script src="app.js"></script>
+        <script src="customersController.js"></script>
+        <script src="isolateScopeWithStringDirective.js"></script>
+        <script src="helloWorldDirective.js"></script>
+        <script src="isolateScopeWithObjectDirective.js"></script>
+        <script src="isolateScopeWithEventDirective.js"></script>
+        <script src="tableHelperDirective.js"></script>
+    </body>
+</html>
+

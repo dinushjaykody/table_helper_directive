@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app = "directivesModule">
+<head>
+    <title>Table Helper DOM Directive</title>
+    <style>
+        h3 { cursor: pointer }
+        th { text-align:left; background-color: #ccc;cursor:pointer;}
+        td { width:150px; }
+        .tableHelper { font-family: 'Arial' }
+        .rowCount { font-weight: bold; }
+    </style>
+</head>
+    <div data-ng-controller="CustomersController">
+        <h3 ng-click="addCustomer()">Table Helper DOM Directive</h3>
+        <table-helper
+                datasource="customers"
+                columnmap="[{name: 'Name'}, {street: 'Street'}, {age: 'Age'}, {url: 'URL', hidden: true}]">
+        </table-helper>
+
+    </div>
+<body>
+</body>
+
+<script src="scripts/angular.js"></script>
+<script src="app.js"></script>
+<script src="tableHelperDirective.js"></script>
+<script src="customersController.js"></script>
+
+</body>
+</html>
+
